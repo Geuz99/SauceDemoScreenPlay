@@ -16,6 +16,7 @@ import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.openqa.selenium.WebDriver;
 
 public class LoginStep {
+
     private Actor geuz;
     @Before
     public void setUp(){
@@ -36,7 +37,6 @@ public class LoginStep {
     @Then("^validamos que estemos en la pagina principal (.+)$")
     public void validamos_que_estemos_en_la_pagina_principal(String validtexto) {
         geuz.should(GivenWhenThen.seeThat(LoginQuestion.loginSuccessful(validtexto)));
-
     }
 
 }
